@@ -16,13 +16,15 @@ import {SharedModule} from './shared/shared.module';
 import {SidebarComponent} from './sidebar/sidebar.component';
 import {LoggerModule} from "@flight-workspace/logger-lib";
 import {CustomLogFormatterService} from "./shared/logging/custom-log-formatter.service";
+import {ReactiveFormsModule} from "@angular/forms";
+import { FlightLookaheadComponent } from './flight-lookahead/flight-lookahead.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
     FlightBookingModule,
-
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     FlightCancellingModule,
     LoggerModule.forRoot({
@@ -39,7 +41,8 @@ import {CustomLogFormatterService} from "./shared/logging/custom-log-formatter.s
     SidebarComponent,
     NavbarComponent,
     HomeComponent,
-    BasketComponent
+    BasketComponent,
+    FlightLookaheadComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
